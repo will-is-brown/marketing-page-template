@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product Name: Clear, Single-Sentence Value Proposition</title>
+<meta name="description" content="One sentence explaining the core benefit. No account required, instant API access.">
+<meta name="theme-color" content="#f8f4ef">
+
+<!-- Inline SVG Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236b3df5'/%3E%3Cpath fill='%23fff' d='M8 8h16v4H8zM8 14h10v4H8zM8 20h14v4H8z'/%3E%3C/svg%3E">
+
+<!-- Preload self-hosted variable font -->
+<link rel="preload" href="/assets/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="/page.css">
+</head>
+<body>
+
+<!-- 1. Sky Section: Warm gradient canvas containing Nav, Hero, and the Interactive Stage -->
+<div class="sky">
+  <div class="wrap">
+    
+    <!-- Floating Pill Navigation -->
+    <header class="nav">
+      <a class="brand" href="/">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#6b3df5"/>
+          <path fill="#fff" d="M8 8h16v4H8zM8 14h10v4H8zM8 20h14v4H8z"/>
+        </svg>
+        <span>service.w-b.dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Page Navigation">
+        <a href="#try">Try it</a>
+        <a href="#use">Integration</a>
+        <a href="#limits">Limits</a>
+        <a class="btn small" href="#try">Get started</a>
+      </nav>
+    </header>
+
+    <!-- Split Hero Section -->
+    <section class="hero">
+      <h1>Pass an input.<span class="grad">Get an answer.</span></h1>
+      <div class="hero-side">
+        <p class="lede">Describe the immediate transformation your tool delivers. No friction, zero sign-up required, predictable and fast.</p>
+        <div class="cta-row">
+          <a class="btn" href="#try">Try the live tool</a>
+          <a class="btn ghost" href="#use">Developer docs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Stage (The "Oversized Frame") -->
+    <section id="try" class="frame" aria-label="Interactive Demo Tool">
+      
+      <!-- Left: Interactive Form -->
+      <form id="tool-form" class="tool" novalidate>
+        <h2>Make one now</h2>
+        
+        <div class="field">
+          <label for="tool-input">Target input or web address</label>
+          <input class="input" id="tool-input" name="query" type="text" autocomplete="off" spellcheck="false" value="example-input-data">
+        </div>
+
+        <fieldset class="field">
+          <legend>Configuration variant</legend>
+          <div class="sizes">
+            <label><input type="radio" name="variant" value="compact"><span>Compact</span></label>
+            <label><input type="radio" name="variant" value="standard" checked><span>Standard</span></label>
+            <label><input type="radio" name="variant" value="extended"><span>Extended</span></label>
+          </div>
+        </fieldset>
+
+        <button class="btn" id="submit-btn" type="submit">Run action</button>
+        <p class="status" id="status" role="status" aria-live="polite">Ready when you are.</p>
+
+        <div class="request">
+          <p>HTTP Request</p>
+          <code id="request-line">GET /api/action?query=example-input-data&variant=standard</code>
+        </div>
+      </form>
+
+      <!-- Right: Live Reactive Result Stage -->
+      <div class="result">
+        <div class="tile">
+          <!-- Static/pre-rendered fallback prevents spending visitor API quota on landing -->
+          <div id="result" style="display:flex;align-items:center;justify-content:center;width:min(300px, 62vw);aspect-ratio:1;background:#fff;border-radius:16px;font-weight:600;color:var(--ink);text-align:center;padding:20px;">
+            Output preview appears here
+          </div>
+        </div>
+        <div class="result-foot">
+          <button class="btn ghost small" id="download" type="button">Copy output</button>
+          <span>result.json</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>
+
+<!-- 2. High-Contrast Deep Indigo Curved Band -->
+<section class="band">
+  <div class="wrap">
+    <h2>Built for speed. Designed for zero maintenance.</h2>
+    <div class="facts">
+      <div>
+        <h3>Stateless and private</h3>
+        <p>No storage, no database lookups, and no tracking. Each request executes and is immediately forgotten.</p>
+      </div>
+      <div>
+        <h3>Zero API keys to manage</h3>
+        <p>No sign-up form, no OAuth handshake, and no keys to rotate. Call it directly from CI, scripts, or apps.</p>
+      </div>
+      <div>
+        <h3>Edge-cached performance</h3>
+        <p>Repeated requests are served directly from Cloudflare’s global network with single-digit millisecond latency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Developer Docs & Integration Section -->
+<main class="use" id="use">
+  <div class="wrap">
+    <h2>Drop it into any codebase</h2>
+    <div class="use-grid">
+      
+      <!-- Code Snippets & Rate Limits -->
+      <div>
+        <div class="tabs" role="tablist" aria-label="Code format selector">
+          <button class="tab" role="tab" data-tab="curl" aria-selected="true" type="button">cURL</button>
+          <button class="tab" role="tab" data-tab="url" aria-selected="false" type="button">URL</button>
+          <button class="tab" role="tab" data-tab="javascript" aria-selected="false" type="button">JavaScript</button>
+          <button class="tab" role="tab" data-tab="python" aria-selected="false" type="button">Python</button>
+        </div>
+
+        <div class="snippet">
+          <code id="snippet">curl -X POST "https://service.w-b.dev/api/action" \
+  -H "Accept: application/json"</code>
+          <button class="btn small" id="copy" type="button">Copy</button>
+        </div>
+
+        <div class="limits" id="limits">
+          <h3>Fair Use & Rate Limits</h3>
+          <p>Each client IP is allocated 60 requests per minute. Beyond that, the service responds with HTTP <code>429 Too Many Requests</code> and a <code>Retry-After</code> header.</p>
+          <p>Edge-cached requests bypass origin rate limiting.</p>
+        </div>
+      </div>
+
+      <!-- Parameter Definition List -->
+      <div>
+        <dl class="params">
+          <div>
+            <dt><code>query</code></dt>
+            <dd>Required. The primary payload or URL to process. Validated string format.</dd>
+          </div>
+          <div>
+            <dt><code>variant</code></dt>
+            <dd>Optional. Processing preset: <code>compact</code>, <code>standard</code>, or <code>extended</code>. Default is <code>standard</code>.</dd>
+          </div>
+          <div>
+            <dt>Responses</dt>
+            <dd>HTTP 200 with result payload. HTTP 400 with structured JSON error details on invalid arguments.</dd>
+          </div>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- 4. Footer -->
+<footer class="wrap foot">
+  <span>A micro-service on w-b.dev.</span>
+  <a href="/healthz">Service status</a>
+</footer>
+
+<script src="/page.js"></script>
+</body>
+</html>
