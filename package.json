@@ -1,18 +1,25 @@
 {
   "name": "marketing-page-template",
   "version": "1.0.0",
-  "description": "Viktor.com-inspired microservice and SaaS marketing landing page template",
+  "description": "Viktor-style marketing landing page template for microservices and developer tools",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test"
   },
   "keywords": [
     "marketing",
     "landing-page",
     "viktor",
-    "template"
+    "template",
+    "microservice",
+    "developer-tools"
   ],
-  "author": "Daniel Willis-Brown",
-  "license": "MIT"
+  "author": "Daniel Willis-Brown <iam@w-b.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/will-is-brown/marketing-page-template.git"
+  }
 }

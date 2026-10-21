@@ -122,6 +122,19 @@
     setTimeout(() => (copyButton.textContent = 'Copy'), 1800);
   });
 
+  if (download) {
+    download.addEventListener('click', async () => {
+      const textToCopy = tileResult.textContent?.trim() || '';
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        download.textContent = 'Copied';
+      } catch {
+        download.textContent = 'Press Ctrl+C';
+      }
+      setTimeout(() => (download.textContent = 'Copy output'), 1800);
+    });
+  }
+
   document.querySelectorAll('a[href="#try"]').forEach((link) =>
     link.addEventListener('click', () => setTimeout(() => input.focus({ preventScroll: true }), 400)),
   );
