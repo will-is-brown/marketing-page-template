@@ -1,4 +1,4 @@
-# Viktor-Style Marketing Page Template
+# Modern Marketing Page Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-0-success.svg)](package.json)
@@ -6,7 +6,7 @@
 [![Lighthouse: 100](https://img.shields.io/badge/Lighthouse-100%2F100-success.svg)](#performance--privacy-posture)
 [![Font: Self--Hosted](https://img.shields.io/badge/Font-Self--Hosted%20WOFF2-6b3df5.svg)](#typography--performance)
 
-A high-craft, single-page marketing and interactive demo template for microservices, APIs, and developer tools. Inspired by the warm editorial aesthetic of **viktor.com**, distilled from the production deployment of [`qr-code-service`](https://github.com/will-is-brown/qr-code-service) at [`qr.w-b.dev`](https://qr.w-b.dev).
+A high-craft, single-page marketing and interactive demo template for microservices, APIs, and developer tools. Inspired by the warm editorial aesthetic, distilled from the production deployment of [`qr-code-service`](https://github.com/will-is-brown/qr-code-service) at [`qr.w-b.dev`](https://qr.w-b.dev).
 
 ---
 
